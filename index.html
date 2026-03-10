@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Comic+Relief:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+
+        body {
+            font-family: Roboto;
+            font-size: 18px;
+            --border-color: rgba(24, 24, 24, 0.586);
+        }
+
+        table {
+            margin: 0 auto;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            height: 450px;
+            width: 330px;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .result-output {
+            border-radius: 8px;
+            text-align: right;
+            padding: 0 15px;
+            color: rgba(0, 0, 0, 0.7);
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            font-size: 20px;
+            overflow: hidden;
+
+        }
+
+        .delete-button {
+            width: 20px;
+            border-radius: 8px;
+            padding: 0 8.5px;
+            background-color: rgba(158, 0, 0, 0.637);
+            color: whitesmoke;
+            transition: .15s;
+        }
+
+        .delete-button:hover {
+            box-shadow: 0px 0px 31px 2px rgba(0, 0, 0, 0.57) inset;
+            background-color: red;
+        }
+
+        td {
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            transition: .15s;
+            width: 25%;
+            height: 20%;
+        }
+
+        .digit:hover {
+            box-shadow: 0px 0px 31px -5px rgba(116, 116, 116, 0.57) inset;
+            background-color: rgb(211, 211, 211);
+        }
+
+        @media screen and (max-width: 768px) {
+
+            /* стили для всех мобильных устройств */
+            table {
+                height: 100dvh;
+                width: 100dvw;
+            }
+        }
+
+        .dark {
+            background-color: rgb(48, 48, 48);
+            color: whitesmoke;
+        }
+
+        .dark:hover {
+            color: black;
+            background-color: rgb(189, 187, 187);
+        }
+
+        .dark:active {
+            color: black;
+            background-color: whitesmoke;
+        }
+
+        @media screen and (max-width: 768px) {
+            /* стили для всех мобильных устройств */
+            table {
+                height: 100dvh;
+                width: 100dvw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="result-output" colspan="3"><b>result</b></td>
+                <td class="delete-button clear"><b>C</b></td>
+            </tr>
+            <tr>
+                <td class="digit">1</td>
+                <td class="digit">2</td>
+                <td class="digit">3</td>
+                <td class="operation dark">+</td>
+            </tr>
+            <tr>
+                <td class="digit">4</td>
+                <td class="digit">5</td>
+                <td class="digit">6</td>
+                <td class="operation dark">-</td>
+            </tr>
+            <tr>
+                <td class="digit">7</td>
+                <td class="digit">8</td>
+                <td class="digit">9</td>
+                <td class="operation dark">*</td>
+            </tr>
+            <tr>
+                <td class="operation dark">/</td>
+                <td class="digit">0</td>
+                <td class="point dark">.</td>
+                <td class="equals dark">=</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="https://vlvcoder.github.io/pasha/lessons/calc/calc.js"></script>
+</body>
+
+</html>
